@@ -2,6 +2,16 @@
 
 > This is the first of a set of exercises that follow the evolution of a program to manage trains. This set is cumulative and will build upon previous exercises.
 
+## Objectives
+
+This exercise will allow you to demonstrate:
+
+- your ability to read and interpret a class diagram
+- implement a coded class based on a class diagram and set of specifications
+- implement validation within a class given a set of specifications
+- use unit testing to vertify the coded class is valid
+- use of a common set of methods for validation
+
 ## Overview
 
 Your task is to generate a set of simple data types to represent the primary objects for managing trains. 
@@ -16,10 +26,11 @@ All validation is to be performed by throwing exceptions. Here are some general 
 - Error messages must include details about the limits for acceptable values.
 - Weights must always be positive and non-zero whole numbers. Weights are to be in 100 pound increments (all weights are in pounds).
 - All string information must contain text. Null, empty, and plain white-space text is not allowed. Sanitize your strings by trimming the leading and trailing whitespace.
+- All **public** level mutators must have necessary validation within the properties.
 
 ### The `Engine`
 
-Engines are the workhorse of the railway system. For our purposes, we need to track the train engine's **Model** (e.g.: "CP 8002"), **Serial Number** (e.g.: "48807"), **InService** (e.g.: True), **Weight** (in pounds, e.g.: 147,700), and **Horse Power** (e.g.: 4400). The Model and Serial Number must be stored as read-only information (it cannot be modified). Weight and Horse Power will change as upgrades are done to the engine throughout its lifetime. Allow direct upgrades to these characteristics. Weight and Horse Power can only be altered if the engine is not in service. You will need a greedy constructor for this data type. Create an overloaded .ToString() method for the class to return the instance values in a comma separated value string.
+Engines are the workhorse of the railway system. For our purposes, we need to track the train engine's **Model** (e.g.: "CP 8002"), **Serial Number** (e.g.: "48807"), **InService** (e.g.: True), **Weight** (in pounds, e.g.: 147,700), and **Horse Power** (e.g.: 4400). The Model and Serial Number must be stored as read-only information (it cannot be modified by an outside user). Weight and Horse Power will change as upgrades are done to the engine throughout its lifetime. Allow direct upgrades to these characteristics. Weight and Horse Power can only be altered if the engine is not in service. You will need a greedy constructor for this data type. The engine is defaulted to inservice when created. Create an overloaded .ToString() method for the class to return the instance values in a comma separated value string.
 
 ![Engine](./Engine-ClassDiagram.png)
 
@@ -38,10 +49,11 @@ Railcars carry various kinds of goods. Each railcar is stenciled with certain in
 - **Capacity** (in pounds) - Standard maximum Net Weight. This is the "ballpark" figure used when loading a railcar. The actual scale weight may be slightly higher or lower for what is considered a "full" load.
 - **Load Limit** (in pounds) - Absolute maximum Net Weight allowed for safety purposes. This does not include the Light Weight (weight of empty railcar). Exceeding this weight makes the railcar unsafe.
 - **Type** - Value that represents the type of this car. Once set, cannot be altered.
+- **InService** - Value that represents whether the car is inservice or not.
 
 ![RailCar](./Hopper.jpg)
 
-Railcars can be loaded with freight. When loaded, each car is weighed at a scale that gives the weight to the nearest 100 pounds. The **Gross Weight** is the weight of the freight and the railcar. The **Net Weight** is the weight of the freight only. Any weight within 90% of the **Capacity** is considered as a "full load". Create an overloaded .ToString() method for the class to return the instance values in a comma separated value string.
+Railcars can be loaded with freight. When loaded, each car is weighed at a scale that gives the weight to the nearest 100 pounds. The **Gross Weight** is the weight of the freight and the railcar. The **Net Weight** is the weight of the freight only. Any weight within 90% of the **Capacity** is considered as a "full load". You will need a greedy constructor for this data type. The railcar is defaulted to inservice when created. Create an overloaded .ToString() method for the class to return the instance values in a comma separated value string.
 
 ![RailCar](./RailCar-ClassDiagram.png)
 
