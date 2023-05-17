@@ -2,10 +2,10 @@
 
 > Exercises for this term are posted to this repository. You can copy these instructions to your exercise repository set up by your instructor for this term. However, any updates to the instructions will be placed within this repository.
 
-1. [Exercise 1](./Exercises/Exercise1/ReadMe.md)
-1. [Exercise 2](./Exercises/Exercise2/ReadMe.md)
-1. [Exercise 3](./Exercises/Exercise3/ReadMe.md)
-1. [Exercise 4](./Exercises/Exercise4/ReadMe.md)
+1. [Exercise 1](./Exercise1/ReadMe.md)
+1. [Exercise 2](./Exercise2/ReadMe.md)
+1. [Exercise 3](./Exercise3/ReadMe.md)
+1. [Exercise 4](./Exercise4/ReadMe.md)
 
 
 ## Submission of exercises/project
