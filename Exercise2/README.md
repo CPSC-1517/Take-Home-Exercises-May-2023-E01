@@ -21,7 +21,9 @@ For this exercise, place all the required data types in the namespace `TrainSyst
 
 All validation is to be performed by throwing exceptions. Here are some general requirements.
 
-- Exceptions must have meaningful error messages.
+- Exceptions must have meaningful error messages and be of an appropriate type
+  - missing value in parameter: ArgumentNullException
+  - incorrect value for parameter: ArgumentException, ArgumentOutOfRangeException, or FormatException
 - Error messages must include details about the limits for acceptable values.
 - Weights must always be positive and non-zero whole numbers. Weights are to be in 100 pound increments (all weights are in pounds).
 - All string information must contain text. Null, empty, and plain white-space text is not allowed. Sanitize your strings by trimming the leading and trailing whitespace.
