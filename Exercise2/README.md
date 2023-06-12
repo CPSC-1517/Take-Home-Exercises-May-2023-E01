@@ -110,7 +110,7 @@ If the train is asked to detach the railcar serial number "GATX 225963", then th
 ## Create Unit testing methods
 
 
- A unit testing project called `UnitTestingEX2` has been supplied for this exercise. Add it to your solution. The following table indicates the unit test cases to create. Unit Test names are left up to you. The required tests are outlined in the following table. Use are to use FluentAssertions within the XUnit testing project.
+ A unit testing project called `UnitTestingEX2`needs to be created for this exercise. Add it to your solution. The following table indicates the unit test cases to create. Unit Test names are left up to you. The required tests are outlined in the following table. Use are to use FluentAssertions within the XUnit testing project.
 
 #### Unit Tests
 
